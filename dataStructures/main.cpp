@@ -8,8 +8,18 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main() {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    /*
+     I want a solid understanding of:
+        Linked Lists
+        Trees,Tries, and Graphs
+        Stacks and Queues
+        Heaps
+        Vectors/ArrayLists
+        Hash Tables
+     */
+
     return 0;
 }
