@@ -8,7 +8,14 @@
 
 #ifndef LinkedList_hpp
 #define LinkedList_hpp
-
 #include <stdio.h>
+
+class LinkedList{
+private:
+    
+public:
+    //Constructor
+    LinkedList();
+};
 
 #endif /* LinkedList_hpp */
