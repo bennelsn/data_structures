@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9CA311B1226EA7FC00410EB7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CA311B0226EA7FC00410EB7 /* main.cpp */; };
-		9CA311B9226FDE4500410EB7 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CA311B7226FDE4500410EB7 /* LinkedList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,9 +25,8 @@
 /* Begin PBXFileReference section */
 		9CA311AD226EA7FC00410EB7 /* dataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA311B0226EA7FC00410EB7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		9CA311B7226FDE4500410EB7 /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
-		9CA311B8226FDE4500410EB7 /* LinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		9CA311BB227474D000410EB7 /* LinkedListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListInterface.h; sourceTree = "<group>"; };
+		9CA311BC22747F9B00410EB7 /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +61,7 @@
 			children = (
 				9CA311B0226EA7FC00410EB7 /* main.cpp */,
 				9CA311BB227474D000410EB7 /* LinkedListInterface.h */,
-				9CA311B7226FDE4500410EB7 /* LinkedList.cpp */,
-				9CA311B8226FDE4500410EB7 /* LinkedList.hpp */,
+				9CA311BC22747F9B00410EB7 /* LinkedList.h */,
 			);
 			path = dataStructures;
 			sourceTree = "<group>";
@@ -126,7 +123,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA311B9226FDE4500410EB7 /* LinkedList.cpp in Sources */,
 				9CA311B1226EA7FC00410EB7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
