@@ -8,4 +8,3 @@
 
 #include "LinkedList.hpp"
 
-LinkedList::LinkedList(){};

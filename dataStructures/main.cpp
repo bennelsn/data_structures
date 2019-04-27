@@ -21,6 +21,15 @@ int main() {
         Vectors/ArrayLists
         Hash Tables
      */
+    for(int i = 0; i < 1; i++){
+        
+        //cout<<l->getIndex()<<"\n";
+        delete l;
+    
+    }
+  
+    
+    
     
     
 

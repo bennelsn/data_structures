@@ -6,16 +6,20 @@
 //  Copyright © 2019 Ben Nelson. All rights reserved.
 //
 
-#ifndef LinkedList_hpp
-#define LinkedList_hpp
-#include <stdio.h>
+#pragma once
 
-class LinkedList{
+#include <stdio.h>
+#include "LinkedListInterface.h"
+
+template <class T>
+class LinkedList : LinkedListInterface<T> {
+    
 private:
+    
     
 public:
     //Constructor
     LinkedList();
+    
 };
 
-#endif /* LinkedList_hpp */

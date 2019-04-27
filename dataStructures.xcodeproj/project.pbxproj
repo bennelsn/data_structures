@@ -28,6 +28,7 @@
 		9CA311B0226EA7FC00410EB7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9CA311B7226FDE4500410EB7 /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		9CA311B8226FDE4500410EB7 /* LinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
+		9CA311BB227474D000410EB7 /* LinkedListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				9CA311B0226EA7FC00410EB7 /* main.cpp */,
+				9CA311BB227474D000410EB7 /* LinkedListInterface.h */,
 				9CA311B7226FDE4500410EB7 /* LinkedList.cpp */,
 				9CA311B8226FDE4500410EB7 /* LinkedList.hpp */,
 			);
