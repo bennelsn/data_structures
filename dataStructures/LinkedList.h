@@ -17,8 +17,8 @@ class LinkedList : LinkedListInterface<T> {
 private:
     
     /*
-     My Single Linked List Structure
-     I created a struct to group some simple data types into one unique data type of my own, called Node.
+    My Single Linked List Structure
+    I created a struct to group some simple data types into one unique data type of my own, called Node.
      
         NODE 0            NODE 1                           NODE N
         (Head)                                             (Tail)
@@ -45,13 +45,10 @@ private:
     Node* tail;
     
     /*
-     doesExist
+    doesExist
      
-     Iterates through the current linked list and compares values with the given input value
-     
-     If the input value is in the current linked list, returns 1
-     Else returns 0.
-     */
+    Iterates through the current linked list and compares values with the given input value.
+    If the input value is in the current linked list, returns 1, else returns 0.*/
     int doesExist(T value){
         
         //Case #1 - The list is empty.
@@ -83,6 +80,7 @@ private:
     
 
 public:
+    
     //Constructor
     LinkedList(){
         this->head = NULL;
@@ -90,12 +88,10 @@ public:
     };
     
     /*
-     insertHead
+    insertHead
      
-     A node with the given value should be inserted at the beginning of the list.
-     
-     Do not allow duplicate values in the list.
-     */
+    A node with the given value should be inserted at the beginning of the list.
+    Do not allow duplicate values in the list. */
     void insertHead(T value){
         
         //Do not all duplicate values
@@ -124,58 +120,74 @@ public:
     };
     
     /*
-     insertTail
+    insertTail
      
-     A node with the given value should be inserted at the end of the list.
-     
-     Do not allow duplicate values in the list.
-     */
-    void insertTail(T value){};
+    A node with the given value should be inserted at the end of the list.
+    Do not allow duplicate values in the list.*/
+    void insertTail(T value){
+    
+        //Do not all duplicate values
+        if(!doesExist(value)){
+            
+            Node* n = new Node(value,NULL);
+            
+            //Case #1 - The list is empty.
+            if(this->head == NULL){
+                this->head = n;
+                this->tail = n;
+            }
+            //Case #2 - The list has one or more elements
+            else{
+                //Grab the tail
+                Node* oldTail = this->tail;
+                
+                //Make the current tail this new Node n
+                this->tail = n;
+                
+                //That means the oldTail used to be the last, so the rest of the list is still connected.
+                //Just point it to the new tail and we are done.
+                oldTail->next = this->tail;
+                
+                //Release the oldTail
+                oldTail = NULL;
+            }
+        }
+    };
     
     /*
-     insertAfter
+    insertAfter
      
-     A node with the given value should be inserted immediately after the
-     node whose value is equal to insertionNode.
-     
-     A node should only be added if the node whose value is equal to
-     insertionNode is in the list. Do not allow duplicate values in the list.
-     */
+    A node with the given value should be inserted immediately after the node whose value is equal to insertionNode.
+    A node should only be added if the node whose value is equal to insertionNode is in the list. 
+    Do not allow duplicate values in the list.*/
     void insertAfter(T value, T insertionNode){};
     
     /*
-     remove
+    remove
      
-     The node with the given value should be removed from the list.
-     
-     The list may or may not include a node with the given value.
-     */
+    The node with the given value should be removed from the list.
+    The list may or may not include a node with the given value.*/
     void remove(T value){};
     
     /*
      clear
      
-     Remove all nodes from the list.
-     */
+    Remove all nodes from the list.*/
     void clear(){};
     
     /*
-     at
+    at
      
-     Returns the value of the node at the given index. The list begins at
-     index 0.
-     
-     If the given index is out of range of the list, throw an out of range exception.
-     */
+    Returns the value of the node at the given index. The list begins at index 0. 
+    If the given index is out of range of the list, throw an out of range exception.*/
     T at(int index){
         return NULL;
     };
     
     /*
-     size
+    size
      
-     Returns the number of nodes in the list.
-     */
+    Returns the number of nodes in the list.*/
     int size(){
         return 0;
     };

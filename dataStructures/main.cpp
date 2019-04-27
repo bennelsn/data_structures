@@ -21,15 +21,13 @@ int main() {
         Vectors/ArrayLists
         Hash Tables
      */
-    cout << "started";
+    cout << "started\n";
 
     LinkedList<int> *int_list_ptr = new LinkedList<int>();
     for(int i = 0; i < 10; i++){
-        int_list_ptr->insertHead(i*2);
+        int_list_ptr->insertTail(i*2);
     }
-    for(int i = 0; i < 10; i++){
-        int_list_ptr->insertHead(i*2);
-    }
+
     int y = 0;
     if(y ==0){
         
