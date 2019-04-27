@@ -31,9 +31,14 @@ int main() {
     
     //insert 10 after 6
     list_ptr->insertAfter(6, 3000);
-    list_ptr->insertAfter(0, 3000);
     list_ptr->insertAfter(6, 2000);
-    list_ptr->insertAfter(3, 6);
+    
+    list_ptr->remove(2000);
+    list_ptr->remove(0);
+    list_ptr->remove(9);
+    list_ptr->remove(39);
+    
+    
     
     
 

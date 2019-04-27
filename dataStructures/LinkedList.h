@@ -65,7 +65,7 @@ private:
         else{
         //Iterate over the list
             Node* temp = this->head;
-            while(temp->next != NULL){
+            while(temp != NULL){
                 if(temp->data == value){
                     /* We found an existing value, but remember to set temp back to NULL so it doesn't keep pointing at anything. */
                     temp = NULL;
@@ -184,7 +184,59 @@ public:
      
     The node with the given value should be removed from the list.
     The list may or may not include a node with the given value.*/
-    void remove(T value){};
+    void remove(T value){
+        //Check to ensure the value is in the list.
+        if(doesExist(value)){
+            
+            //Case #1 - There is only one element in the list.
+            if(this->head->next == NULL){
+                Node* temp = this->head;
+                this->head = NULL;
+                this->tail = NULL;
+                delete temp;
+            }
+            //Case #2 - There are multiple elements in the list.
+            else{
+                Node* current = this->head;
+                Node* previous = NULL;
+                
+                while(current->data != value){
+                    previous = current;
+                    current = current->next;
+                }
+                
+                /*At this point the current ptr is on the node we want, and the previous ptr is right before it. 
+                 We just need to connect the previous node to whatever is next for the current node.*/
+                
+                //HEAD removal
+                if(previous == NULL){
+                    //HEAD + TAIL are the same.
+                    if(current->next == NULL){
+                        this->head = NULL;
+                        this->tail = NULL;
+                    }
+                    //HEAD + TAIL are NOT the same.
+                    else{
+                        this->head = current->next;
+                    }
+                }
+                //TAIL removal
+                else if(current->next == NULL){
+                    this->tail = previous;
+                    this->tail->next = NULL;
+                    previous = NULL;
+                }
+                //NON HEAD / NON TAIL removal
+                else{
+                    previous->next = current->next;
+                    current->next = NULL;
+                    previous = NULL;
+                    
+                }
+                delete current;
+            }
+        }
+    };
     
     /*
      clear
