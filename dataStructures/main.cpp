@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "LinkedList.hpp"
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -21,12 +21,8 @@ int main() {
         Vectors/ArrayLists
         Hash Tables
      */
-    for(int i = 0; i < 1; i++){
-        
-        //cout<<l->getIndex()<<"\n";
-        delete l;
-    
-    }
+
+    LinkedList<int> *l = new LinkedList<int>();
   
     
     
@@ -34,4 +30,4 @@ int main() {
     
 
     return 0;
-}
+};
