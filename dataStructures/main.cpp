@@ -23,10 +23,19 @@ int main() {
      */
     cout << "started\n";
 
-    LinkedList<int> *int_list_ptr = new LinkedList<int>();
+    //Make list 0 to 9
+    LinkedList<int> *list_ptr = new LinkedList<int>();
     for(int i = 0; i < 10; i++){
-        int_list_ptr->insertTail(i*2);
+        list_ptr->insertTail(i);
     }
+    
+    //insert 10 after 6
+    list_ptr->insertAfter(6, 3000);
+    list_ptr->insertAfter(0, 3000);
+    list_ptr->insertAfter(6, 2000);
+    list_ptr->insertAfter(3, 6);
+    
+    
 
     int y = 0;
     if(y ==0){

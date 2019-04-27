@@ -37,12 +37,12 @@ public:
      insertAfter
      
      A node with the given value should be inserted immediately after the
-     node whose value is equal to insertionNode.
+     node whose value is equal to insertValue.
      
      A node should only be added if the node whose value is equal to
-     insertionNode is in the list. Do not allow duplicate values in the list.
+     insertValue is in the list. Do not allow duplicate values in the list.
      */
-    virtual void insertAfter(T value, T insertionNode) = 0;
+    virtual void insertAfter(T value, T insertValue) = 0;
     
     /*
      remove

@@ -139,17 +139,17 @@ public:
             //Case #2 - The list has one or more elements
             else{
                 //Grab the tail
-                Node* oldTail = this->tail;
+                Node* temp = this->tail;
                 
                 //Make the current tail this new Node n
                 this->tail = n;
                 
-                //That means the oldTail used to be the last, so the rest of the list is still connected.
-                //Just point it to the new tail and we are done.
-                oldTail->next = this->tail;
+                //That means the temp used to be the tail, so the rest of the list is still connected to it.
+                //Just point the temp ptr to the new tail and we are done.
+                temp->next = this->tail;
                 
                 //Release the oldTail
-                oldTail = NULL;
+                temp = NULL;
             }
         }
     };
@@ -157,10 +157,27 @@ public:
     /*
     insertAfter
      
-    A node with the given value should be inserted immediately after the node whose value is equal to insertionNode.
-    A node should only be added if the node whose value is equal to insertionNode is in the list. 
+    A node with the given value should be inserted immediately after the node whose value is equal to insertValue.
+    A node should only be added if the node whose value is equal to insertValue is in the list. 
     Do not allow duplicate values in the list.*/
-    void insertAfter(T value, T insertionNode){};
+    void insertAfter(T value, T insertValue){
+        //Make sure value exists and insertValue does NOT exist.
+        if(doesExist(value) && (!doesExist(insertValue))){
+            
+            //Iterate through list to find the node whos data is equal to value
+            Node* temp = this->head;
+            while(temp->data != value){
+                temp = temp->next;
+            }
+            
+            //At this point temp is the node whos data is equal to value. Store what it is pointing to with n.
+            Node* n = new Node(insertValue,temp->next);
+            temp->next = n;
+            
+            //Now it is properly inserted, so release temp ptr.
+            temp = NULL;
+        }
+    };
     
     /*
     remove
