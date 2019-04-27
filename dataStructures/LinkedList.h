@@ -24,29 +24,33 @@ private:
         (Head)                                             (Tail)
      ____________       ____________                   ____________
      |          |       |          |                   |          |
-     | data     |       |          |                   |          |
-     | next(ptr)| --->  |          | --->  (...) --->  |          |
-     | index    |       |          |                   |          |
+     | data     |       | data     |                   | data     |
+     | next(ptr)| --->  | next(ptr)| --->  (...) --->  | next(ptr)|
+     |          |       |          |                   |          |
      |__________|       |__________|                   |__________|
     
     */
 
     struct Node{
         T data;
-        Node* next;
-        int index;
+        Node* next = NULL;
+        Node(T data, Node* next){
+            this->data = data;
+            this->next = next;
+        }
     };
     
     //The linked list is going to need to keep track of its head and tail
     Node* head;
     Node* tail;
-    int test;
     
-    
-    
+
 public:
     //Constructor
-    LinkedList(){};
+    LinkedList(){
+        this->head = NULL;
+        this->tail = NULL;
+    };
     
     /*
      insertHead
@@ -55,7 +59,28 @@ public:
      
      Do not allow duplicate values in the list.
      */
-    void insertHead(T value){};
+    void insertHead(T value){
+        //Make the node regardless of any other information because insertion was called.
+        Node* n = new Node(value,NULL);
+        
+        //Case #1 - The list is empty.
+        if(this->head == NULL){
+            this->head = n;
+            this->tail = n;
+        }
+        //Case #2 - Only one node in the list.
+        else if(this->head->next == NULL){
+            this->head = n;
+            this->head->next = this->tail;
+        }
+        //Case #3 - There are multiple nodes in the list.
+        else{
+            Node* temp = this->head;
+            this->head = n;
+            this->head->next = temp;
+            temp = NULL;
+        }
+    };
     
     /*
      insertTail

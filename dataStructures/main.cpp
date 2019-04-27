@@ -22,8 +22,15 @@ int main() {
         Hash Tables
      */
 
-    LinkedList<int> *l = new LinkedList<int>();
-  
+    LinkedList<int> *int_list_ptr = new LinkedList<int>();
+    for(int i = 0; i < 10; i++){
+        int_list_ptr->insertHead(i*2);
+    }
+    int y = 0;
+    if(y ==0){
+        
+        cout<<"yp";
+    }
     
     
     
