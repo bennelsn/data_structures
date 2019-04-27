@@ -44,6 +44,43 @@ private:
     Node* head;
     Node* tail;
     
+    /*
+     doesExist
+     
+     Iterates through the current linked list and compares values with the given input value
+     
+     If the input value is in the current linked list, returns 1
+     Else returns 0.
+     */
+    int doesExist(T value){
+        
+        //Case #1 - The list is empty.
+        if(this->head == NULL){
+            return 0;
+        }
+        //Case #2 - The list has one element.
+        else if(this->head->next == NULL){
+            if(this->head->data == value){
+                return 1;
+            }
+        }
+        //Case #3 - The list has multiple elements.
+        else{
+        //Iterate over the list
+            Node* temp = this->head;
+            while(temp->next != NULL){
+                if(temp->data == value){
+                    /* We found an existing value, but remember to set temp back to NULL so it doesn't keep pointing at anything. */
+                    temp = NULL;
+                    return 1;
+                }
+                //Move to next node
+                temp = temp->next;
+            }
+        }
+        return 0;
+    };
+    
 
 public:
     //Constructor
@@ -60,25 +97,29 @@ public:
      Do not allow duplicate values in the list.
      */
     void insertHead(T value){
-        //Make the node regardless of any other information because insertion was called.
-        Node* n = new Node(value,NULL);
         
-        //Case #1 - The list is empty.
-        if(this->head == NULL){
-            this->head = n;
-            this->tail = n;
-        }
-        //Case #2 - Only one node in the list.
-        else if(this->head->next == NULL){
-            this->head = n;
-            this->head->next = this->tail;
-        }
-        //Case #3 - There are multiple nodes in the list.
-        else{
-            Node* temp = this->head;
-            this->head = n;
-            this->head->next = temp;
-            temp = NULL;
+        //Do not all duplicate values
+        if(!doesExist(value)){
+            
+            Node* n = new Node(value,NULL);
+        
+            //Case #1 - The list is empty.
+            if(this->head == NULL){
+                this->head = n;
+                this->tail = n;
+            }
+            //Case #2 - Only one node in the list.
+            else if(this->head->next == NULL){
+                this->head = n;
+                this->head->next = this->tail;
+            }
+            //Case #3 - There are multiple nodes in the list.
+            else{
+                Node* temp = this->head;
+                this->head = n;
+                this->head->next = temp;
+                temp = NULL;
+            }
         }
     };
     
