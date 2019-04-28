@@ -9,6 +9,7 @@
 #pragma once
 
 #include <stdio.h>
+#include <stdexcept>
 #include "LinkedListInterface.h"
 
 template <class T>
@@ -254,6 +255,23 @@ public:
     Returns the value of the node at the given index. The list begins at index 0. 
     If the given index is out of range of the list, throw an out of range exception.*/
     T at(int index){
+        int size = this->size() - 1;
+        if(index > size || index < 0){
+            throw std::out_of_range("Index is out of range.");
+        }
+        else{
+            int count = 0;
+            Node* current = this->head;
+            do{
+                if(count == index){
+                    T data = current->data;
+                    current = NULL;
+                    return data;
+                }
+                current = current->next;
+                count++;
+            }while(current != NULL);
+        }
         return NULL;
     };
     

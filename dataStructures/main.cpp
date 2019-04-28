@@ -21,44 +21,6 @@ int main() {
         Vectors/ArrayLists
         Hash Tables
      */
-    cout << "started\n";
-
-    //Make list 0 to 9
-    LinkedList<int> *list_ptr = new LinkedList<int>();
-    for(int i = 0; i < 10; i++){
-        list_ptr->insertTail(i);
-    }
-    
-    //insert 10 after 6
-    list_ptr->insertAfter(6, 3000);
-    list_ptr->insertAfter(6, 2000);
-    
-    list_ptr->remove(2000);
-    list_ptr->remove(0);
-    list_ptr->remove(9);
-    list_ptr->remove(39);
-    
-    int size = list_ptr->size();
-    cout <<"\n"<<size<<"\n";
-    
-    list_ptr->clear();
-    
-    size = list_ptr->size();
-    cout <<"\n"<<size<<"\n";
-    
-    
-    
-    
-
-    int y = 0;
-    if(y ==0){
-        
-        cout<<"yp";
-    }
-    
-    
-    
-    
-
+  
     return 0;
 };
