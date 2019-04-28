@@ -38,6 +38,8 @@ int main() {
     list_ptr->remove(9);
     list_ptr->remove(39);
     
+    list_ptr->clear();
+    
     
     
     

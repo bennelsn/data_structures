@@ -242,7 +242,11 @@ public:
      clear
      
     Remove all nodes from the list.*/
-    void clear(){};
+    void clear(){
+        while(this->head !=NULL){
+            remove(this->head->data);
+        }
+    };
     
     /*
     at
