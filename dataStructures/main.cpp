@@ -38,7 +38,13 @@ int main() {
     list_ptr->remove(9);
     list_ptr->remove(39);
     
+    int size = list_ptr->size();
+    cout <<"\n"<<size<<"\n";
+    
     list_ptr->clear();
+    
+    size = list_ptr->size();
+    cout <<"\n"<<size<<"\n";
     
     
     

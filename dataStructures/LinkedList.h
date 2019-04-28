@@ -262,7 +262,14 @@ public:
      
     Returns the number of nodes in the list.*/
     int size(){
-        return 0;
+        int size = 0;
+        Node* temp = this->head;
+        while(temp != NULL){
+            temp = temp->next;
+            size++;
+        }
+        temp = NULL;
+        return size;
     };
     
 };
