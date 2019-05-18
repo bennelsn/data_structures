@@ -21,6 +21,7 @@ int main() {
         Vectors/ArrayLists
         Hash Tables
      */
+    cout << "Hello World";
   
     return 0;
 };

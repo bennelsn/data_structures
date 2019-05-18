@@ -4,15 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TestLinkedList.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Testing.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>dataStructures.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>testDataStructures.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9C7BC0752290A6B600507E3F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C7BC0802290A7FC00507E3F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9CA311AC226EA7FC00410EB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CA311C02290A4FA00410EB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
