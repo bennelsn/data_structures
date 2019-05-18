@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C7BC0842290A7FC00507E3F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BC0832290A7FC00507E3F /* main.cpp */; };
+		9C7BC08A2290A99100507E3F /* testLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BC0892290A99100507E3F /* testLinkedList.cpp */; };
 		9CA311B1226EA7FC00410EB7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CA311B0226EA7FC00410EB7 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		9C7BC0762290A6B600507E3F /* TestLinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = TestLinkedList; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/TestLinkedList; sourceTree = "<absolute>"; };
 		9C7BC0812290A7FC00507E3F /* Testing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Testing; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/Testing; sourceTree = "<absolute>"; };
 		9C7BC0832290A7FC00507E3F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9C7BC0882290A93500507E3F /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		9C7BC0892290A99100507E3F /* testLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testLinkedList.cpp; sourceTree = "<group>"; };
 		9CA311AD226EA7FC00410EB7 /* dataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = dataStructures; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/dataStructures; sourceTree = "<absolute>"; };
 		9CA311B0226EA7FC00410EB7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9CA311BB227474D000410EB7 /* LinkedListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListInterface.h; sourceTree = "<group>"; };
@@ -96,7 +99,9 @@
 		9C7BC0822290A7FC00507E3F /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				9C7BC0882290A93500507E3F /* catch.hpp */,
 				9C7BC0832290A7FC00507E3F /* main.cpp */,
+				9C7BC0892290A99100507E3F /* testLinkedList.cpp */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7BC08A2290A99100507E3F /* testLinkedList.cpp in Sources */,
 				9C7BC0842290A7FC00507E3F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
