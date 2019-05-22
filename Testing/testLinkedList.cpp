@@ -15,8 +15,16 @@ TEST_CASE("Testing Linked List") {
     int a = 5;
     int b = 29;
     int c = 120;
+    int d = 567;
     
-    SECTION("Inserting Node at the head of list") {
+    /*
+    insertHead
+    
+    A node with the given value should be inserted at the beginning of the list.
+    
+    Do not allow duplicate values in the list.
+    */
+    SECTION("Testing insertHead") {
         
         INFO("Using insertHead")
        
@@ -56,8 +64,14 @@ TEST_CASE("Testing Linked List") {
  
     }
     
-    
-    SECTION("Inserting Node at the tail of list") {
+    /*
+     insertTail
+     
+     A node with the given value should be inserted at the end of the list.
+     
+     Do not allow duplicate values in the list.
+     */
+    SECTION("Testing insertTail") {
         
         list.insertTail(a);
         list.insertTail(b);
@@ -94,6 +108,76 @@ TEST_CASE("Testing Linked List") {
         CHECK(list.size() == 3);
        
     }
+    
+    /*
+     insertAfter
+     
+     A node with the given value should be inserted immediately after the
+     node whose value is equal to insertValue.
+     
+     A node should only be added if the node whose value is equal to
+     insertValue is in the list. Do not allow duplicate values in the list.
+     */
+    SECTION("Testing insertAfter") {
+        
+        list.insertTail(a);
+        list.insertTail(b);
+        list.insertTail(c);
+        list.insertAfter(b, d);
+        
+        CAPTURE(list.at(3));
+        CHECK(list.at(3) == c);
+        
+        CAPTURE(list.at(2));
+        CHECK(list.at(2) == d);
+        
+        CAPTURE(list.at(1));
+        CHECK(list.at(1) == b);
+        
+        CAPTURE(list.at(0));
+        CHECK(list.at(0) == a);
+        
+        INFO("Ensure duplicates aren't allowed in")
+        list.insertTail(c);
+        list.insertTail(d);
+        list.insertTail(a);
+        list.insertTail(b);
+        list.insertTail(d);
+        list.insertTail(a);
+        
+        //Ensure only 4 items exist
+        CAPTURE(list.size());
+        CHECK(list.size() == 4);
+        
+    }
+
+    /*
+    remove
+    
+    The node with the given value should be removed from the list.
+    The list may or may not include a node with the given value.*/
+    SECTION("Testing remove") {
+        
+        list.insertTail(a);
+        list.insertTail(b);
+        list.insertTail(c);
+        
+        list.remove(a);
+        list.remove(b);
+        
+        //Check that nothing happens if a value that is not in the list is input
+        list.remove(a+b+c);
+        
+        //Check now that only c is in the list
+        CAPTURE(list.size());
+        CHECK(list.size() == 1);
+        
+        
+        //Check that the remaining item is equal to c.
+        CAPTURE(list.at(0));
+        CHECK(list.at(0) == c);
+    }
+
          
 
     /*
