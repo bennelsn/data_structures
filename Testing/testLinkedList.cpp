@@ -8,6 +8,7 @@
 
 #include "catch.hpp"
 #include "LinkedList.h"
+#include <string>
 
 TEST_CASE("Testing Linked List") {
     
@@ -176,7 +177,90 @@ TEST_CASE("Testing Linked List") {
         //Check that the remaining item is equal to c.
         CAPTURE(list.at(0));
         CHECK(list.at(0) == c);
+        
+        //Remove c, then recheck size.
+        list.remove(c);
+        CAPTURE(list.size());
+        CHECK(list.size() == 0);
+        
+        
+        //Add 10000 elements
+        for(int i = 0; i < 10000; i++){
+            if(i%2 == 0){
+                list.insertHead(i);
+            }
+            else{
+                list.insertTail(i);
+            }
+        }
+        //Remove the 10000 elements
+        for(int i = 0; i < 100000; i++){
+            list.remove(i);
+        }
+        
+        //Check the list
+        CAPTURE(list.size());
+        CHECK(list.size() == 0);
+        
+        
     }
+    
+    /*
+     clear
+     
+     Remove all nodes from the list.
+     */
+    SECTION("Testing clear") {
+        
+        int n = 10000;
+        for(int i = 0; i < n; i++){
+            list.insertTail(i);
+        }
+    
+        //Ensure n items exist
+        CAPTURE(list.size());
+        CHECK(list.size() == n);
+        
+        list.clear();
+        
+        //Ensure 0 items exist
+        CAPTURE(list.size());
+        CHECK(list.size() == 0);
+    }
+    
+    /*
+     at
+     
+     Returns the value of the node at the given index. The list begins at
+     index 0.
+     
+     If the given index is out of range of the list, throw an out of range exception.
+     */
+    SECTION("Testing at") {
+        
+      
+        list.insertTail(a);
+        list.insertTail(b);
+        list.insertTail(c);
+        
+        //"Index is out of range."
+    
+        //Check items
+        CAPTURE(list.at(0));
+        CHECK(list.at(0) == a);
+        
+        CAPTURE(list.at(1));
+        CHECK(list.at(1) == b);
+        
+        CAPTURE(list.at(2));
+        CHECK(list.at(2) == c);
+ 
+        
+    }
+    
+    
+
+    
 
          
 
