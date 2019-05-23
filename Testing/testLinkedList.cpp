@@ -243,8 +243,6 @@ TEST_CASE("Testing Linked List") {
         list.insertTail(b);
         list.insertTail(c);
         
-        //"Index is out of range."
-    
         //Check items
         CAPTURE(list.at(0));
         CHECK(list.at(0) == a);
@@ -254,26 +252,36 @@ TEST_CASE("Testing Linked List") {
         
         CAPTURE(list.at(2));
         CHECK(list.at(2) == c);
- 
         
+        //Need to check for out of range exception
+        CHECK_THROWS_AS(list.at(3), std::out_of_range);
+        
+        CAPTURE(list.size());
+        CHECK(list.size() == 3);
     }
     
-    
-
-    
-
-         
-
     /*
-    SECTION("test bigStr") {
-        sc.setStr("TestStr");
-        REQUIRE(sc.bigStr() == "TestStr : 8");
+     size
+     
+     Returns the number of nodes in the list.
+     */
+    SECTION("Testing size") {
+        list.insertTail(a);
+        list.insertTail(b);
+        list.insertTail(c);
+        
+        CAPTURE(list.size());
+        CHECK(list.size() == 3);
+        
+        list.clear();
+        
+        CAPTURE(list.size());
+        CHECK(list.size() == 0);
+        
+        for(int i = 0; i < 1000; i++){
+            list.insertHead(i);
+            CAPTURE(list.size());
+            CHECK(list.size() == i+1);
+        }
     }
-    
-    SECTION("Test doubles") {
-        sc.setD(1);
-        CHECK(sc.getD() == 1);
-        sc.setD(1.0/3.0);
-        CHECK(sc.getD() == Approx(0.33333)); // Nice
-    }*/
 }
