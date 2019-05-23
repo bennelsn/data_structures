@@ -14,14 +14,13 @@ using namespace std;
 int main() {
     /*
      I want a solid understanding of:
-        Linked Lists
+        Linked Lists - Done
         Trees,Tries, and Graphs
         Stacks and Queues
         Heaps
-        Vectors/ArrayLists
+        Vectors/ArrayLists - IP
         Hash Tables
      */
-    cout << "Hello World";
   
     return 0;
 };
