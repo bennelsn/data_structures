@@ -9,7 +9,7 @@
 #pragma once
 
 template <class T>
-class ArrayListInterface{
+class HashMapInterface{
 public:
     
     /*
@@ -32,8 +32,8 @@ public:
     
     */
     
-    ArrayListInterface(void){};
-    virtual ~ArrayListInterface(void){};
+    HashMapInterface(void){};
+    virtual ~HashMapInterface(void){};
     
     
     
