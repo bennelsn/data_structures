@@ -52,17 +52,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9C7BC0762290A6B600507E3F /* TestLinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = TestLinkedList; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/TestLinkedList; sourceTree = "<absolute>"; };
-		9C7BC0812290A7FC00507E3F /* Testing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = Testing; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/Testing; sourceTree = "<absolute>"; };
+		9C0CAC5322D9FAD200A2AB88 /* dataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0CAC5422D9FAD200A2AB88 /* testDataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testDataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0CAC5522D9FAD200A2AB88 /* TestLinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestLinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0CAC5622D9FAD200A2AB88 /* Testing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Testing; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0CAC5722DBFF8900A2AB88 /* ArrayListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayListInterface.h; sourceTree = "<group>"; };
 		9C7BC0832290A7FC00507E3F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9C7BC0882290A93500507E3F /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		9C7BC0892290A99100507E3F /* testLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testLinkedList.cpp; sourceTree = "<group>"; };
-		9C7BC08B229630D500507E3F /* ArrayListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayListInterface.h; sourceTree = "<group>"; };
-		9CA311AD226EA7FC00410EB7 /* dataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = dataStructures; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/dataStructures; sourceTree = "<absolute>"; };
+		9C7BC08B229630D500507E3F /* HashMapInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashMapInterface.h; sourceTree = "<group>"; };
 		9CA311B0226EA7FC00410EB7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9CA311BB227474D000410EB7 /* LinkedListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListInterface.h; sourceTree = "<group>"; };
 		9CA311BC22747F9B00410EB7 /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
-		9CA311C12290A4FA00410EB7 /* testDataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = testDataStructures; path = /Users/BenNelson/Desktop/dataStructures/build/Debug/testDataStructures; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,10 @@
 			children = (
 				9CA311AF226EA7FC00410EB7 /* dataStructures */,
 				9C7BC0822290A7FC00507E3F /* Testing */,
+				9C0CAC5322D9FAD200A2AB88 /* dataStructures */,
+				9C0CAC5422D9FAD200A2AB88 /* testDataStructures */,
+				9C0CAC5522D9FAD200A2AB88 /* TestLinkedList */,
+				9C0CAC5622D9FAD200A2AB88 /* Testing */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,9 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				9CA311B0226EA7FC00410EB7 /* main.cpp */,
-				9C7BC08B229630D500507E3F /* ArrayListInterface.h */,
+				9C7BC08B229630D500507E3F /* HashMapInterface.h */,
 				9CA311BB227474D000410EB7 /* LinkedListInterface.h */,
 				9CA311BC22747F9B00410EB7 /* LinkedList.h */,
+				9C0CAC5722DBFF8900A2AB88 /* ArrayListInterface.h */,
 			);
 			path = dataStructures;
 			sourceTree = "<group>";
@@ -143,7 +149,7 @@
 			);
 			name = TestLinkedList;
 			productName = TestLinkedList;
-			productReference = 9C7BC0762290A6B600507E3F /* TestLinkedList */;
+			productReference = 9C0CAC5522D9FAD200A2AB88 /* TestLinkedList */;
 			productType = "com.apple.product-type.tool";
 		};
 		9C7BC0802290A7FC00507E3F /* Testing */ = {
@@ -160,7 +166,7 @@
 			);
 			name = Testing;
 			productName = Testing;
-			productReference = 9C7BC0812290A7FC00507E3F /* Testing */;
+			productReference = 9C0CAC5622D9FAD200A2AB88 /* Testing */;
 			productType = "com.apple.product-type.tool";
 		};
 		9CA311AC226EA7FC00410EB7 /* dataStructures */ = {
@@ -177,7 +183,7 @@
 			);
 			name = dataStructures;
 			productName = dataStructures;
-			productReference = 9CA311AD226EA7FC00410EB7 /* dataStructures */;
+			productReference = 9C0CAC5322D9FAD200A2AB88 /* dataStructures */;
 			productType = "com.apple.product-type.tool";
 		};
 		9CA311C02290A4FA00410EB7 /* testDataStructures */ = {
@@ -194,7 +200,7 @@
 			);
 			name = testDataStructures;
 			productName = testDataStructures;
-			productReference = 9CA311C12290A4FA00410EB7 /* testDataStructures */;
+			productReference = 9C0CAC5422D9FAD200A2AB88 /* testDataStructures */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -229,6 +235,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 9CA311A4226EA7FC00410EB7;
@@ -434,6 +441,7 @@
 				9C7BC07C2290A6B600507E3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C7BC0852290A7FC00507E3F /* Build configuration list for PBXNativeTarget "Testing" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +450,7 @@
 				9C7BC0872290A7FC00507E3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CA311A8226EA7FC00410EB7 /* Build configuration list for PBXProject "dataStructures" */ = {
 			isa = XCConfigurationList;
