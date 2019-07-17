@@ -16,4 +16,12 @@ public:
     ArrayListInterface(void){}
     virtual ~ArrayListInterface(void){}
     
-}
+    /*
+     add
+     
+     Adds an element to the arraylist.
+     
+     */
+    virtual void add(T elem) = 0;
+    
+};

@@ -57,6 +57,7 @@
 		9C0CAC5522D9FAD200A2AB88 /* TestLinkedList */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestLinkedList; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0CAC5622D9FAD200A2AB88 /* Testing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Testing; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0CAC5722DBFF8900A2AB88 /* ArrayListInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayListInterface.h; sourceTree = "<group>"; };
+		9C0CAC5822DEB36300A2AB88 /* ArrayList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayList.h; sourceTree = "<group>"; };
 		9C7BC0832290A7FC00507E3F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9C7BC0882290A93500507E3F /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		9C7BC0892290A99100507E3F /* testLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testLinkedList.cpp; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 				9CA311BB227474D000410EB7 /* LinkedListInterface.h */,
 				9CA311BC22747F9B00410EB7 /* LinkedList.h */,
 				9C0CAC5722DBFF8900A2AB88 /* ArrayListInterface.h */,
+				9C0CAC5822DEB36300A2AB88 /* ArrayList.h */,
 			);
 			path = dataStructures;
 			sourceTree = "<group>";

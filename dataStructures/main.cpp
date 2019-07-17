@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "LinkedList.h"
+#include "ArrayList.h"
 
 using namespace std;
 
@@ -21,5 +22,7 @@ int main() {
         Vectors/ArrayLists - IP
         Hash Tables
      */
+    
+    ArrayList<int> *list = new ArrayList<int>();
     return 0;
 };
