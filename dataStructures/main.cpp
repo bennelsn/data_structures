@@ -24,5 +24,7 @@ int main() {
      */
     
     ArrayList<int> *list = new ArrayList<int>();
+
+    
     return 0;
 };

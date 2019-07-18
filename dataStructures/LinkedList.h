@@ -35,6 +35,8 @@ private:
     struct Node{
         T data;
         Node* next = NULL;
+        
+        //Struct Constructor
         Node(T data, Node* next){
             this->data = data;
             this->next = next;
@@ -87,6 +89,11 @@ public:
         this->head = NULL;
         this->tail = NULL;
     };
+    
+    //Destructor
+    ~LinkedList(){
+        clear();
+    }
     
     /*
     insertHead

@@ -17,6 +17,13 @@ class ArrayList : ArrayListInterface<T> {
 public:
     ArrayList(){};
     
+    /*
+     add
+     
+     Adds an element to the array.
+     If adding an element will exceed the bounds of the array, the array will be copied into a new array, twice the size.
+     
+     */
     void add(T elem){
         
     };

@@ -19,9 +19,10 @@ public:
     /*
      add
      
-     Adds an element to the arraylist.
+     Adds an element to the array.
+     If adding an element will exceed the bounds of the array, the array will be copied into a new array, twice the size.
      
-     */
+    */
     virtual void add(T elem) = 0;
     
 };
