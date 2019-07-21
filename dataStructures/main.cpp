@@ -9,8 +9,10 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "ArrayList.h"
+#include <string>
 
 using namespace std;
+
 
 int main() {
     /*
@@ -23,8 +25,27 @@ int main() {
         Hash Tables
      */
     
-    ArrayList<int> *list = new ArrayList<int>();
-
+    
+    ArrayList<string> *list = NULL;
+    list = new ArrayList<string>();
+    list->add("ben");
+    list->add("cat");
+    list->add("dog");
+    list->add("yoyo");
+    list->add("llama");
+    list->add("taco");
+    list->add("ben");
+    list->add("texas");
+    list->add("barbie");
+    cout << "list:  " << list->get(0) << endl;
+    delete list;
+   
+        //cout << "list:  " << list->get(0) << endl;
+   
+    
+    
+   
+    
     
     return 0;
 };
