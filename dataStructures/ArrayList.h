@@ -38,7 +38,7 @@ private:
     void resize(){
         //Double size capacity
         capacity *= 2;
-        T *new_array = new T[capacity];
+        T * new_array = new T[capacity];
         //Copy into new array
         for(int i = 0; i < elem_count; i++){
             new_array[i] = array[i];
@@ -62,7 +62,7 @@ public:
     /*
      add
      
-     Adds an element to the array.
+     Adds an element to the end of the array.
      If adding an element will exceed the bounds of the array, the array will be copied into a new array, twice the size.
      
      */
@@ -71,6 +71,25 @@ public:
             resize();
         }
         array[elem_count] = elem;
+        elem_count++;
+    };
+    
+    /*
+     add
+     
+     Adds an element to the array at the given index. It shifts the other elements after the index, over one space in the array.
+     If adding an element will exceed the bounds of the array, the array will be copied into a new array, twice the size.
+     
+     */
+    virtual void add(T elem, int index){
+        if(needs_resize()){
+            resize();
+        }
+        //Shift elements after the insertion index
+        for(int i = elem_count-1;  i >= index; i--){
+            array[i+1] = array[i];
+        }
+        array[index] = elem;
         elem_count++;
     };
     

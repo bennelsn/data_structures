@@ -10,7 +10,7 @@
 #include "LinkedList.h"
 #include "ArrayList.h"
 #include <string>
-
+#include <vector>
 using namespace std;
 
 
@@ -26,18 +26,30 @@ int main() {
      */
     
     
+
     ArrayList<string> *list = NULL;
     list = new ArrayList<string>();
-    list->add("ben");
-    list->add("cat");
-    list->add("dog");
-    list->add("yoyo");
-    list->add("llama");
-    list->add("taco");
-    list->add("ben");
-    list->add("texas");
-    list->add("barbie");
-    cout << "list:  " << list->get(0) << endl;
+    list->add("a");
+    list->add("b");
+    list->add("c");
+   
+    
+    for(int i = 0; i < list->get_size(); i++){
+        cout << i << "- " << list->get(i) << endl;
+    }
+    //list->get_size();
+    //cout << list->get(3);
+   
+    cout << endl;
+    
+    list->add("aa",1);
+    
+    for(int i = 0; i < list->get_size(); i++){
+        cout << i << "- " << list->get(i) << endl;
+    }
+    
+    
+    
     delete list;
    
         //cout << "list:  " << list->get(0) << endl;

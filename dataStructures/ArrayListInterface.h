@@ -11,27 +11,6 @@
 
 template <class T>
 class ArrayListInterface{
-private:
-    
-    /*
-     needs_resize
-     
-     Verifies if the array is full, and therefore needs to be enlarged.
-     Returns true if the array is full, and will require resizing to add more elements.
-     Returns false if the array can still have elements added to it.
-     
-     */
-    virtual  bool needs_resize() = 0;
-    
-    /*
-     resize
-     
-     Dynamically resizes the array by copying all elements in the array into a new array that is double the size.
-     
-     */
-    virtual void resize() = 0;
-    
-    
 public:
     
     ArrayListInterface(void){}
@@ -40,11 +19,20 @@ public:
     /*
      add
      
-     Adds an element to the array.
+     Adds an element to the end of the array.
      If adding an element will exceed the bounds of the array, the array will be copied into a new array, twice the size.
      
     */
     virtual void add(T elem) = 0;
+    
+    /*
+     add
+     
+     Adds an element to the array at the given index. It shifts the other elements after the index, over one space in the array.
+     If adding an element will exceed the bounds of the array, the array will be copied into a new array, twice the size.
+     
+     */
+    virtual void add(T elem, int index) = 0;
     
     /*
      get
