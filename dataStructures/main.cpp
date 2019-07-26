@@ -25,8 +25,6 @@ int main() {
         Hash Tables
      */
     
-    
-
     ArrayList<string> *list = NULL;
     list = new ArrayList<string>();
     list->add("a");
@@ -37,12 +35,31 @@ int main() {
     for(int i = 0; i < list->get_size(); i++){
         cout << i << "- " << list->get(i) << endl;
     }
-    //list->get_size();
-    //cout << list->get(3);
-   
+
     cout << endl;
     
     list->add("aa",1);
+    list->add("bb",1);
+    list->add("cc",1);
+    list->add("dd",0);
+    
+    for(int i = 0; i < list->get_size(); i++){
+        cout << i << "- " << list->get(i) << endl;
+    }
+    
+    cout << endl;
+    
+    list->remove(0);
+  
+    
+    for(int i = 0; i < list->get_size(); i++){
+        cout << i << "- " << list->get(i) << endl;
+    }
+    
+    cout << endl;
+    
+    list->trim();
+    
     
     for(int i = 0; i < list->get_size(); i++){
         cout << i << "- " << list->get(i) << endl;
@@ -51,13 +68,6 @@ int main() {
     
     
     delete list;
-   
-        //cout << "list:  " << list->get(0) << endl;
-   
-    
-    
-   
-    
-    
+
     return 0;
 };

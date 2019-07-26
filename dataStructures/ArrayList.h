@@ -35,10 +35,9 @@ private:
      Dynamically resizes the array by copying all elements in the array into a new array that is double the size.
      
      */
-    void resize(){
-        //Double size capacity
-        capacity *= 2;
-        T * new_array = new T[capacity];
+    void resize(int size){
+        //New array with size of cap
+        T * new_array = new T[size];
         //Copy into new array
         for(int i = 0; i < elem_count; i++){
             new_array[i] = array[i];
@@ -47,6 +46,21 @@ private:
         delete[] array;
         //Assign new array
         array = new_array;
+        
+        //Adjust the capacity variable
+        capacity = size;
+    }
+    
+    /*
+     check_index
+     
+     Verifies that the index is not out of bounds of the allocated array. If it is, throw an exception.
+     
+     */
+    void check_index(int index){
+        if(index >= elem_count){
+            throw std::out_of_range("Index is out of range");
+        }
     }
     
 public:
@@ -68,7 +82,7 @@ public:
      */
     void add(T elem){
         if(needs_resize()){
-            resize();
+            resize(capacity*2);
         }
         array[elem_count] = elem;
         elem_count++;
@@ -82,8 +96,9 @@ public:
      
      */
     virtual void add(T elem, int index){
+        check_index(index);
         if(needs_resize()){
-            resize();
+            resize(capacity*2);
         }
         //Shift elements after the insertion index
         for(int i = elem_count-1;  i >= index; i--){
@@ -100,12 +115,8 @@ public:
      
      */
     T get(int index){
-        if(index < elem_count){
-            return array[index];
-        }
-        else{
-            throw std::out_of_range("Index is out of range");
-        }
+        check_index(index);
+        return array[index];
     }
     
     /*
@@ -116,6 +127,31 @@ public:
      */
     int get_size(){
         return elem_count;
+    }
+    
+    /*
+     remove
+     
+     Remove an element from the array at a given index. If the index is out of bounds, throw an exception.
+     
+     */
+    void remove(int index){
+        check_index(index);
+        //Shift elements after the insertion index
+        for(int i = index; i < elem_count-1; i++){
+            array[i] = array[i+1];
+        }
+        elem_count--;
+    }
+    
+    /*
+     trim
+     
+     Trims the array by decreasing the array size to only the amount of contained elements.
+     
+     */
+    void trim(){
+        resize(elem_count);
     }
     
 };

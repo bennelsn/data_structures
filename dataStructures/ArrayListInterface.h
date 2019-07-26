@@ -50,4 +50,20 @@ public:
      */
     virtual int get_size() = 0;
     
+    /*
+     remove
+     
+     Remove an element from the array at a given index. If the index is out of bounds, throw an exception.
+     
+     */
+    virtual void remove(int index) = 0;
+    
+    /*
+     trim
+     
+     Trims the array by decreasing the array size to only the amount of contained elements.
+     
+     */
+    virtual void trim() = 0;
+    
 };
