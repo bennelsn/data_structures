@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C7BC0752290A6B600507E3F"
-               BuildableName = "TestLinkedList"
-               BlueprintName = "TestLinkedList"
+               BlueprintIdentifier = "9C7BC0802290A7FC00507E3F"
+               BuildableName = "Testing"
+               BlueprintName = "Testing"
                ReferencedContainer = "container:dataStructures.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C7BC0752290A6B600507E3F"
-            BuildableName = "TestLinkedList"
-            BlueprintName = "TestLinkedList"
+            BlueprintIdentifier = "9C7BC0802290A7FC00507E3F"
+            BuildableName = "Testing"
+            BlueprintName = "Testing"
             ReferencedContainer = "container:dataStructures.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C7BC0752290A6B600507E3F"
-            BuildableName = "TestLinkedList"
-            BlueprintName = "TestLinkedList"
+            BlueprintIdentifier = "9C7BC0802290A7FC00507E3F"
+            BuildableName = "Testing"
+            BlueprintName = "Testing"
             ReferencedContainer = "container:dataStructures.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C7BC0752290A6B600507E3F"
-            BuildableName = "TestLinkedList"
-            BlueprintName = "TestLinkedList"
+            BlueprintIdentifier = "9C7BC0802290A7FC00507E3F"
+            BuildableName = "Testing"
+            BlueprintName = "Testing"
             ReferencedContainer = "container:dataStructures.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
