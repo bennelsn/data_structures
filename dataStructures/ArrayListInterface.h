@@ -43,12 +43,12 @@ public:
     virtual T get(int index) = 0;
     
     /*
-     get_size
+     size
      
      Gets the size of the array.
      
      */
-    virtual int get_size() = 0;
+    virtual int size() = 0;
     
     /*
      remove

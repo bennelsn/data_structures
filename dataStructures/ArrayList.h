@@ -120,12 +120,12 @@ public:
     }
     
     /*
-     get_size
+     size
      
      Gets the size of the array.
      
      */
-    int get_size(){
+    int size(){
         return elem_count;
     }
     

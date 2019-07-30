@@ -32,7 +32,7 @@ int main() {
     list->add("c");
    
     
-    for(int i = 0; i < list->get_size(); i++){
+    for(int i = 0; i < list->size(); i++){
         cout << i << "- " << list->get(i) << endl;
     }
 
@@ -43,7 +43,7 @@ int main() {
     list->add("cc",1);
     list->add("dd",0);
     
-    for(int i = 0; i < list->get_size(); i++){
+    for(int i = 0; i < list->size(); i++){
         cout << i << "- " << list->get(i) << endl;
     }
     
@@ -52,7 +52,7 @@ int main() {
     list->remove(0);
   
     
-    for(int i = 0; i < list->get_size(); i++){
+    for(int i = 0; i < list->size(); i++){
         cout << i << "- " << list->get(i) << endl;
     }
     
@@ -61,7 +61,7 @@ int main() {
     list->trim();
     
     
-    for(int i = 0; i < list->get_size(); i++){
+    for(int i = 0; i < list->size(); i++){
         cout << i << "- " << list->get(i) << endl;
     }
     
