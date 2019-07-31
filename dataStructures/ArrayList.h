@@ -137,11 +137,25 @@ public:
      */
     void remove(int index){
         check_index(index);
-        //Shift elements after the insertion index
+        //Shift elements after the remove index
         for(int i = index; i < elem_count-1; i++){
             array[i] = array[i+1];
         }
         elem_count--;
+    }
+    
+    /*
+     clear
+     
+     Removes all elements from the array
+     
+     */
+    void clear(){
+        int count = size();
+        for(int i = 0; i< count; i++){
+            remove(size()-1);
+        }
+        trim();
     }
     
     /*

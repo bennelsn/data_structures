@@ -21,53 +21,49 @@ int main() {
         Trees,Tries, and Graphs
         Stacks and Queues
         Heaps
-        Vectors/ArrayLists - IP
-        Hash Tables
+        Vectors/ArrayLists - Done
+        Hash Tables - IP
      */
     
-    ArrayList<string> *list = NULL;
-    list = new ArrayList<string>();
-    list->add("a");
-    list->add("b");
-    list->add("c");
+    ArrayList<string> list;
+    list.add("a");
+    list.add("b");
+    list.add("c");
    
     
-    for(int i = 0; i < list->size(); i++){
-        cout << i << "- " << list->get(i) << endl;
+    for(int i = 0; i < list.size(); i++){
+        cout << i << "- " << list.get(i) << endl;
     }
 
     cout << endl;
     
-    list->add("aa",1);
-    list->add("bb",1);
-    list->add("cc",1);
-    list->add("dd",0);
+    list.add("aa",1);
+    list.add("bb",1);
+    list.add("cc",1);
+    list.add("dd",0);
     
-    for(int i = 0; i < list->size(); i++){
-        cout << i << "- " << list->get(i) << endl;
+    for(int i = 0; i < list.size(); i++){
+        cout << i << "- " << list.get(i) << endl;
     }
     
     cout << endl;
     
-    list->remove(0);
+    list.remove(0);
   
     
-    for(int i = 0; i < list->size(); i++){
-        cout << i << "- " << list->get(i) << endl;
+    for(int i = 0; i < list.size(); i++){
+        cout << i << "- " << list.get(i) << endl;
     }
     
     cout << endl;
     
-    list->trim();
+    list.trim();
     
     
-    for(int i = 0; i < list->size(); i++){
-        cout << i << "- " << list->get(i) << endl;
+    for(int i = 0; i < list.size(); i++){
+        cout << i << "- " << list.get(i) << endl;
     }
     
-    
-    
-    delete list;
 
     return 0;
 };

@@ -59,6 +59,14 @@ public:
     virtual void remove(int index) = 0;
     
     /*
+     clear
+     
+     Removes all elements from the array
+     
+     */
+    virtual void clear() = 0;
+    
+    /*
      trim
      
      Trims the array by decreasing the array size to only the amount of contained elements.
