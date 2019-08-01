@@ -54,9 +54,9 @@ TEST_CASE("Testing Array List") {
      Removes all elements from the array
      
      */
-    SECTION("Testing clear") {
+    SECTION("Testing clear and size") {
         
-        INFO("Using clear")
+        INFO("Using clear and size")
         
         int count = 2000;
         for(int i = 0; i < count; i++){
@@ -72,22 +72,5 @@ TEST_CASE("Testing Array List") {
        
     }
     
-    /*
-     size
-     
-     Gets the size of the array.
-     
-     */
     
-    SECTION("Testing size") {
-        
-        INFO("Using size")
-        
-        int count = 2;
-        for(int i = 0; i < count; i++){
-            std::string x = std::to_string(i);
-            list.add(x);
-        }
-        
-    }
 }

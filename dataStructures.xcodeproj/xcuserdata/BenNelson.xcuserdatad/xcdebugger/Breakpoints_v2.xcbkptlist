@@ -41,54 +41,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Testing/testArrayList.cpp"
-            timestampString = "586231818.075035"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "TEST_CASE(&quot;Testing Array List&quot;)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
-                  moduleName = "Testing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bennelson/Documents/Git_Repositories/data_structures/Testing/testArrayList.cpp"
-                  timestampString = "586231515.115591"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "5367">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
-                  moduleName = "Testing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bennelson/Documents/Git_Repositories/data_structures/Testing/testArrayList.cpp"
-                  timestampString = "586231515.118192"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "5372">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "dataStructures/main.cpp"
             timestampString = "586231818.075081"
             startingColumnNumber = "9223372036854775807"
