@@ -1,4 +1,7 @@
 
+
+//NOTES ON C++
+
 Just a little basic understanding of C++ and why the constructor and destructor are the way they are.
 
 We make the constructor non-virtual because C++ needs to know what object type will be created at compile time.
@@ -16,3 +19,51 @@ Static languages typically run faster than Dynamic languages because they are as
 the program executes. Similarly, compiled languages run faster than interpreted languages, because they translate the code
 before run-time, instead of doing it on the fly like a interpreted language.
 
+
+//NOTES ON HASHMAP (from username pramodbablad on java conception of the day)
+
+HashMap is one of the high performing data structure in java collection framework. Whatever may be the size of the data,
+HashMap almost gives constant time performance for most frequent operations – insertion and retrieval.
+That’s why HashMap is the first choice for the big sized data having requirement of faster retrieval and faster insertion operations.
+There are two factors which affect the performance of HashMap. One is the load factor and another one is initial capacity.
+You have to choose these two factors very carefully while constructing an HashMap object.
+In this post, we will have a look at initial capacity and load factor in HashMap and see how they affect the performance of HashMap.
+
+Initial Capacity Of HashMap :
+The capacity of an HashMap is the number of buckets in the hash table.
+The initial capacity is the capacity of an HashMap at the time of its creation.
+The default initial capacity of the HashMap is 24 i.e 16. The capacity of the HashMap is doubled each time it reaches the threshold.
+i.e the capacity is increased to 25=32, 26=64, 27=128….. when the threshold is reached.
+
+Load Factor Of HashMap :
+Load factor is the measure which decides when to increase the capacity of the HashMap. The default load factor is 0.75f.
+
+How The Threshold Is Calculated?
+The threshold of an HashMap is the product of current capacity and load factor.
+
+Threshold = (Current Capacity) * (Load Factor)
+
+For example, if the HashMap is created with initial capacity of 16 and load factor of 0.75f, then threshold will be,
+
+Threshold = 16 * 0.75 = 12
+
+That means, the capacity of the HashMap is increased from 16 to 32 after the 12th element (key-value pair) is added into the HashMap.
+
+How Initial Capacity And Load Factor Affect Performance Of HashMap?
+Whenever HashMap reaches its threshold, rehashing takes place.
+Rehashing is a process where new HashMap object with new capacity is created and all old elements (key-value pairs) are placed
+into new object after recalculating their hashcode. This process of rehashing is both space and time consuming.
+So, you must choose the initial capacity, by keeping the number of expected elements (key-value pairs) in mind,
+so that rehashing process doesn’t occur too frequently.
+
+You also have to be very careful while choosing the load factor.
+According to HashMap doc, the default load factor of 0.75f always gives best performance in terms of both space and time.
+For example,
+
+If you choose load factor as 1.0f, then rehashing takes place after filling 100% of the current capacity.
+This may save the space but it will increase the retrieval time of existing elements.
+Suppose if you choose load factor as 0.5f, then rehashing takes place after filling 50% of the current capacity.
+This will increase the number of rehashing operations. This will further degrade the HashMap in terms of both space and time.
+
+So, you have to be very careful while choosing the initial capacity and load factor of an HashMap object.
+Choose the initial capacity and load factor such that they minimize the number of rehashing operations.

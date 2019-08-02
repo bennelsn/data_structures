@@ -1,5 +1,5 @@
 //
-//  LinkedList.hpp
+//  LinkedList.h
 //  dataStructures
 //
 //  Created by Ben Nelson on 4/23/19.
